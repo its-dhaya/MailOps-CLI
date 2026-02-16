@@ -15,7 +15,11 @@
     "cli-table3": "^0.6.5",
     "commander": "^11.1.0",
     "date-fns": "^2.30.0",
+<<<<<<< HEAD
     "dotenv": "^16.6.1",
+=======
+    "dotenv": "^16.5.0",
+>>>>>>> 53f6f5ba2ee967fd3795b2a0bdf2197fc657c284
     "express": "^4.21.2",
     "fs": "^0.0.1-security",
     "fs-extra": "^11.3.0",
@@ -23,14 +27,21 @@
     "googleapis": "^144.0.0",
     "imap": "^0.8.19",
     "mailparser": "^3.7.2",
+<<<<<<< HEAD
     "mic": "^2.1.2",
+=======
+>>>>>>> 53f6f5ba2ee967fd3795b2a0bdf2197fc657c284
     "node-imap": "^0.9.6",
     "node-notifier": "^10.0.1",
     "node-record-lpcm16": "^1.0.1",
     "nodemailer": "^6.10.0",
     "notify-send": "^0.1.2",
     "open": "^10.1.0",
+<<<<<<< HEAD
     "openai": "^4.104.0",
+=======
+    "openai": "^4.93.0",
+>>>>>>> 53f6f5ba2ee967fd3795b2a0bdf2197fc657c284
     "read": "^4.1.0",
     "readline-sync": "^1.4.10",
     "word-wrap": "^1.2.5"
