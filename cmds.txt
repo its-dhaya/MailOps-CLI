@@ -1,5 +1,10 @@
 npm install date-fns dotenv nodemailer node-imap
 
+<<<<<<< HEAD
+
+/////////////////OLD///// C O M M A N D S////////////////////////////////////////////////// 
+=======
+>>>>>>> 53f6f5ba2ee967fd3795b2a0bdf2197fc657c284
 node email-cli.js send "elanthirayan27@gmail.com" "Test Subject" "Test Body" 
 
 node email-cli.js send "elanthirayan27@gmail.com,elanthirayan30@gmail.com" "Test Subject" "Test Body" "C:\Users\elant\OneDrive\Desktop\meethub.pptx"
@@ -20,10 +25,39 @@ node email-cli.js searchsender elanthirayan27@gmail.com
 
 node email-cli.js subject-enhance "leave letter for on week"
 
+<<<<<<< HEAD
+node email-cli.js sentiment "I'm so happy with the results!"
+
+////////////////////////////////NEW///////C O M M A N D S/////////////////////////////////////////
+
+node email-cli.js compose example@gmail.com "hey, got your mail. let's talk." formal // main feature 
+
+node email-cli.js stats [today|weekly|monthly]
+
+node email-cli.js label <emailId> <LABEL_NAME> 
+
+node email-cli.js run-rules
+
+node email-cli.js add-account
+
+node email-cli.js accounts
+
+node email-cli.js use <account_name>
+
+node email-cli.js send "sample@gmail.com" "Snippet Test" ";intro"
+
+node email-cli.js translate <email_body> <language_code>
+
+node email-cli.js summarize "message"
+
+node email-cli.js voice-compose example@gmail.com "subject"
+
+=======
 node email-cli.js tone-change "hey, got your mail. let's talk." formal // main feature 
 
 node email-cli.js sentiment "I'm so happy with the results!"
 
+>>>>>>> 53f6f5ba2ee967fd3795b2a0bdf2197fc657c284
 node email-cli.js help
 
 cd C:\Users\elant\OneDrive\Desktop\email-cli-tool

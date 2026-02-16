@@ -44,8 +44,13 @@ async function readEmails(mode, param1, param2) {
 
     // ✅ Create a table for displaying emails
     const table = new Table({
+<<<<<<< HEAD
+      head: ["🆔 ID", "📩 Subject", "👤 From", "📜 Snippet", "📅 Date"],
+      colWidths: [20, 32, 28, 55, 24],
+=======
       head: ["📩 Subject", "👤 From", "📜 Snippet", "📅 Date Received"],
       colWidths: [40, 30, 60, 25],
+>>>>>>> 53f6f5ba2ee967fd3795b2a0bdf2197fc657c284
       wordWrap: true,
     });
 
@@ -79,7 +84,11 @@ async function readEmails(mode, param1, param2) {
         second: "2-digit",
       });
 
+<<<<<<< HEAD
+      table.push([msg.id, subject, from, snippet, receivedDate]);
+=======
       table.push([subject, from, snippet, receivedDate]);
+>>>>>>> 53f6f5ba2ee967fd3795b2a0bdf2197fc657c284
     }
 
     console.log(table.toString());

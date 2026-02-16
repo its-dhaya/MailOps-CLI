@@ -22,6 +22,43 @@ async function searchEmails(sender) {
     const email = await gmail.users.messages.get({ userId: "me", id: msg.id });
     const headers = email.data.payload.headers;
 
+<<<<<<< HEAD
+    const subject =
+      headers.find((h) => h.name === "Subject")?.value || "No Subject";
+    const date =
+      headers.find((h) => h.name === "Date")?.value || "Unknown Date";
+    const from = headers.find((h) => h.name === "From")?.value || sender;
+
+    let messageBody = "No content available";
+
+    // Extracting email content
+    if (email.data.payload.parts) {
+      const textPart = email.data.payload.parts.find(
+        (part) => part.mimeType === "text/plain"
+      );
+      const htmlPart = email.data.payload.parts.find(
+        (part) => part.mimeType === "text/html"
+      );
+
+      if (textPart && textPart.body.data) {
+        messageBody = Buffer.from(textPart.body.data, "base64").toString(
+          "utf-8"
+        );
+      } else if (htmlPart && htmlPart.body.data) {
+        messageBody = Buffer.from(htmlPart.body.data, "base64").toString(
+          "utf-8"
+        );
+      }
+    } else if (email.data.payload.body && email.data.payload.body.data) {
+      messageBody = Buffer.from(
+        email.data.payload.body.data,
+        "base64"
+      ).toString("utf-8");
+    }
+
+    emailData.push({
+      "🆔 ID": msg.id,
+=======
     const subject = headers.find((h) => h.name === "Subject")?.value || "No Subject";
     const date = headers.find((h) => h.name === "Date")?.value || "Unknown Date";
     const from = headers.find((h) => h.name === "From")?.value || sender;
@@ -43,6 +80,7 @@ async function searchEmails(sender) {
     }
 
     emailData.push({
+>>>>>>> 53f6f5ba2ee967fd3795b2a0bdf2197fc657c284
       "📅 Date & Time": date,
       "📧 From": from,
       "📜 Subject": subject,
@@ -50,6 +88,10 @@ async function searchEmails(sender) {
     });
 
     // Display full message separately
+<<<<<<< HEAD
+    console.log(`🆔 ID: ${msg.id}`);
+=======
+>>>>>>> 53f6f5ba2ee967fd3795b2a0bdf2197fc657c284
     console.log(`\n📩 Email from: ${from}`);
     console.log(`📅 Date: ${date}`);
     console.log(`📜 Subject: ${subject}`);

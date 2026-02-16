@@ -1,0 +1,12 @@
+[
+  {
+    "type": "keyword",
+    "value": "zoho",
+    "label": "COMPANY_ZOHO"
+  },
+  {
+    "type": "keyword",
+    "value": "google",
+    "label": "COMPANY_GOOGLE"
+  }
+]
